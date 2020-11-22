@@ -3,6 +3,7 @@
 ```sql
 SELECT DISTINCT status FROM public.tasks
 ORDER BY status ASC
+```
 
 # 2. get the count of all tasks in each project, order by tasks count descending
 
