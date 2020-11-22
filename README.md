@@ -1,14 +1,14 @@
 # 1. get all statuses, not repeating, alphabetically ordered
 
 ```sql
-SELECT DISTINCT status FROM public.tasks
+SELECT DISTINCT status FROM tasks
 ORDER BY status ASC
 ```
 
 # 2. get the count of all tasks in each project, order by tasks count descending
 
 ```sql
-SELECT project_id, COUNT(*) FROM public.tasks
+SELECT project_id, COUNT(*) FROM tasks
 GROUP BY project_id
 ORDER BY count DESC;
 ```
