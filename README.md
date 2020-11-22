@@ -1,4 +1,4 @@
-# 1. get all statuses, not repeating, alphabetically ordered
+## 1. get all statuses, not repeating, alphabetically ordered
 
 ```sql
 SELECT DISTINCT status FROM tasks
