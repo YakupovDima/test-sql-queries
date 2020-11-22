@@ -5,7 +5,7 @@ SELECT DISTINCT status FROM tasks
 ORDER BY status ASC
 ```
 
-# 2. get the count of all tasks in each project, order by tasks count descending
+## 2. get the count of all tasks in each project, order by tasks count descending
 
 ```sql
 SELECT project_id, COUNT(*) FROM tasks
@@ -13,7 +13,7 @@ GROUP BY project_id
 ORDER BY count DESC;
 ```
 
-# 3. get the count of all tasks in each project, order by projects names
+## 3. get the count of all tasks in each project, order by projects names
 
 ```sql
 SELECT *
@@ -26,7 +26,7 @@ LEFT JOIN (
 ORDER BY name ASC;
 ```
 
-# 4. get the tasks for all projects having the name beginning with "N" letter
+## 4. get the tasks for all projects having the name beginning with "N" letter
 
 ```sql
 SELECT tasks.*
@@ -35,7 +35,7 @@ INNER JOIN projects on projects.id = tasks.project_id
 WHERE projects.name LIKE 'n%'
 ```
 
-# 5. get the list of all projects containing the 'a' letter in the middle of 
+## 5. get the list of all projects containing the 'a' letter in the middle of 
 the name, and show the tasks count near each project. Mention that there can exist projects without tasks and tasks with 
 project_id = NULL
 
@@ -50,7 +50,7 @@ LEFT JOIN (
 WHERE name LIKE '%a%'
 ```
 
-# 6. get the list of tasks with duplicate names. Order alphabetically
+## 6. get the list of tasks with duplicate names. Order alphabetically
 
 ```sql
 SELECT *
@@ -64,7 +64,7 @@ WHERE name IN (
 ORDER BY name ASC;
 ```
 
-# 7. get list of tasks having several exact matches of both name and status, from the project 'Garage'. Order by matches count
+## 7. get list of tasks having several exact matches of both name and status, from the project 'Garage'. Order by matches count
 
 ```sql
 SELECT tasks.*, match_count
@@ -81,7 +81,7 @@ INNER JOIN (
 ORDER BY match_count DESC;
 ```
 
-# 8. get the list of project names having more than 10 tasks in status 'completed'. Order by project_id 
+## 8. get the list of project names having more than 10 tasks in status 'completed'. Order by project_id 
 
 ```sql
 SELECT name
